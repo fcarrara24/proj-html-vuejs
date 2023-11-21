@@ -1,10 +1,12 @@
 <template>
   <div>
     <TimerComponent />
+    <HeaderComponent />
   </div>
 </template>
 
 <script>
+import HeaderComponent from './components/HeaderComponent.vue';
 import TimerComponent from './components/TimerComponent.vue';
 
 export default {
@@ -12,7 +14,7 @@ export default {
   data() {
     return {};
   },
-  components: { TimerComponent }
+  components: { TimerComponent, HeaderComponent }
 }
 </script>
 

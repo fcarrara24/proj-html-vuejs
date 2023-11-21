@@ -1,6 +1,6 @@
 <template>
     <div class="outerTimer w-100 d-flex justify-content-center ">
-        <div class=" w-75  d-flex flex-row justify-content-center align-items-center gap-3 p-2">
+        <div class=" w-75  d-flex flex-row justify-content-center align-items-center gap-3 py-1 px-3  ">
             <div class="timerDescription">Starts TOMORROW! Our biggest event of the year...</div>
             <div class="timerClock d-flex flex-row justify-content-center gap-1 align-items-center  ">
                 <i class="fa-regular fa-clock"></i>
