@@ -3,6 +3,7 @@
 export const navbarCoponents = [
     //home
     {
+
         name: 'Home',
         img: './homepages-mega-menu-image-alt.jpg',
         categories: [
@@ -262,6 +263,7 @@ export const navbarCoponents = [
     },
     //shop
     {
+
         name: 'Shop',
         img: null,
         categories: [
