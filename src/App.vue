@@ -1,17 +1,18 @@
 <template>
   <div>
-    <h1>Hello world</h1>
+    <TimerComponent />
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App',
-  data() {
-    return {
+import TimerComponent from './components/TimerComponent.vue';
 
-    }
-  }
+export default {
+  name: "App",
+  data() {
+    return {};
+  },
+  components: { TimerComponent }
 }
 </script>
 
