@@ -1,7 +1,7 @@
 <template>
     <div class="height-box">
         <div class="container box-separator ">
-            <div class="specialItalic text-center mid-cursive-size">
+            <div class="specialItalic text-center ">
                 Artist coaching
             </div>
             <div class="text-center my-title ">
@@ -30,10 +30,10 @@
                 <!-- intermediate left -->
                 <div class="intermediate-left d-flex flex-column justify-content-start">
 
-                    <div class="big-left-title">
+                    <div class="big-left-title text-center pb-2 ">
                         I coach and mentor visual artists, like you, to Create Like You Mean It
                     </div>
-                    <div class="specialItalic">
+                    <div class="specialItalic mid-cursive-size text-center">
                         Martin Garrix
                     </div>
                 </div>
@@ -123,6 +123,6 @@ export default {
 }
 
 .mid-cursive-size {
-    font-size: 18px;
+    font-size: 24px;
 }
 </style>
