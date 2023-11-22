@@ -5,7 +5,7 @@ export const navbarCoponents = [
     {
 
         name: 'Home',
-        img: './homepages-mega-menu-image-alt.jpg',
+        img: '/img/homepages-mega-menu-image-alt.jpg',
         categories: [
             {
                 title: 'MaxCoach Education',

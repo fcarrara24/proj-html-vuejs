@@ -1,5 +1,5 @@
 
-export const footbarCoponent = [
+export const footbarComponent = [
     {
         section: 'Address',
         tag: '',
@@ -100,13 +100,13 @@ export const footbarCoponent = [
         links: [],
         images: [
             {
-                urlImg: '/img/artist_event_1.jpg'
+                urlImg: './img/artist_event_1.jpg'
             },
             {
-                urlImg: '/img/artist_event_2.jpg'
+                urlImg: './img/artist_event_2.jpg'
             },
             {
-                urlImg: '/img/artist_event_3.jpg'
+                urlImg: './img/artist_event_3.jpg'
             },
         ],
         socials: []

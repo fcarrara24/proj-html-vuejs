@@ -126,12 +126,12 @@ export default {
 .dropdown-content {
     display: none;
     min-width: 15vw;
+    border-bottom: 3px solid $backgroundBtnOrange;
 
 }
 
 .dropdown-section {
     max-height: 300px;
-    border-bottom: 3px solid $backgroundBtnOrange;
 }
 
 .dropdown-with-image {

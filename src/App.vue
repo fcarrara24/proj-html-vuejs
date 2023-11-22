@@ -9,6 +9,7 @@
     <BlogComponent />
     <EventComponent />
     <GetContactComponent />
+    <FooterComponent />
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import BlogComponent from './components/BlogComponent.vue';
 import BoxComponent from './components/BoxComponent.vue';
 import CourseComponent from './components/CourseComponent.vue';
 import EventComponent from './components/EventComponent.vue';
+import FooterComponent from './components/FooterComponent.vue';
 import GetContactComponent from './components/GetContactComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import HeroComponent from './components/HeroComponent.vue';
@@ -29,7 +31,7 @@ export default {
   data() {
     return {};
   },
-  components: { TimerComponent, HeaderComponent, HeroComponent, BoxComponent, TestimonialsComponent, CourseComponent, BlogComponent, EventComponent, GetContactComponent }
+  components: { TimerComponent, HeaderComponent, HeroComponent, BoxComponent, TestimonialsComponent, CourseComponent, BlogComponent, EventComponent, GetContactComponent, FooterComponent }
 }
 </script>
 

@@ -30,7 +30,6 @@ export default {
 
 .heroHeigth {
     min-height: 600px;
-    background-color: greenyellow;
 }
 
 .hero-content {
