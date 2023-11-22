@@ -26,6 +26,10 @@
                 </div>
             </div>
         </div>
+        <div class="blogbottom d-flex flex-row justify-content-center pt-5">
+            <div>Get into details now? </div>
+            <div class="text-orange">&nbsp;View all posts <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
     </div>
 </template>
 

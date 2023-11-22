@@ -15,9 +15,6 @@ $fa-font-path: '../webfonts';
     font-size: 400;
 }
 
-h1 {
-    background-color: red;
-}
 
 .my-btn-orange {
     background-color: $backgroundBtnOrange;
@@ -38,5 +35,18 @@ h1 {
 
 .img-conteiner {
     width: 100%;
+    height: auto;
+}
+
+.text-orange {
+    color: $hoverTextOrange;
+}
+
+.image-container {
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
     height: auto;
 }
