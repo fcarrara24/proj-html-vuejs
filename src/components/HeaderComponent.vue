@@ -1,5 +1,10 @@
-<template>
-    <div class="w-100 container">
+<template style="width: 100vw!important; z-index: 10000" >
+    <!-- adding timer component for layout choises here and its spacing -->
+
+    <TimerComponent />
+    <div class="timerHeight"></div>
+
+    <div class="   position-fixed bg-white bg-white w-100 my-0">
         <div class=" d-flex flex-row justify-content-between py-4">
             <div class="img-container">
                 <img class="header-height" src="../assets/img/dark-logo.png" alt="">
@@ -66,36 +71,37 @@
 
 <script>
 import { navbarCoponents } from '@/data/navbarComponents.js'
+import TimerComponent from './TimerComponent.vue';
 export default {
-    name: 'HeaderComponent',
+    name: "HeaderComponent",
     data() {
         return {
             socials: [
                 {
-                    name: 'twitter',
-                    link: '#',
-                    icon: 'fa-brands fa-twitter'
+                    name: "twitter",
+                    link: "#",
+                    icon: "fa-brands fa-twitter"
                 },
                 {
-                    name: 'facebook',
-                    link: '#',
-                    icon: 'fa-brands fa-facebook-f'
+                    name: "facebook",
+                    link: "#",
+                    icon: "fa-brands fa-facebook-f"
                 },
                 {
-                    name: 'instagram',
-                    link: '#',
-                    icon: 'fa-brands fa-instagram'
+                    name: "instagram",
+                    link: "#",
+                    icon: "fa-brands fa-instagram"
                 },
                 {
-                    name: 'linkedin',
-                    link: '#',
-                    icon: 'fa-brands fa-linkedin'
+                    name: "linkedin",
+                    link: "#",
+                    icon: "fa-brands fa-linkedin"
                 },
-
             ],
             HeaderArray: navbarCoponents,
-        }
-    }
+        };
+    },
+    components: { TimerComponent }
 }
 </script>
 
@@ -110,6 +116,10 @@ export default {
 
 .header-height {
     max-height: 40px;
+}
+
+* {
+    z-index: 10000;
 }
 
 .dropdown {

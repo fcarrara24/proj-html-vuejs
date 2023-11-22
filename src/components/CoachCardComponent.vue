@@ -12,7 +12,7 @@
             </div>
             <div class="coachCardInfo">
                 <!-- numero lezioni -->
-                <span><i class="fa-light fa-file-lines"></i> {{ card.lessons }} Lessons </span>
+                <span><i class="fa-regular fa-calendar"></i> {{ card.lessons }} Lessons </span>
                 <!-- numero studenti -->
                 <span><i class="fa-regular fa-user"></i>&nbsp; {{ card.capacity }} Studenti </span>
             </div>

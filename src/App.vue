@@ -1,7 +1,7 @@
 <template>
   <div>
-    <TimerComponent />
     <HeaderComponent />
+
     <HeroComponent />
     <BoxComponent />
     <TestimonialsComponent />
@@ -23,7 +23,7 @@ import GetContactComponent from './components/GetContactComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import HeroComponent from './components/HeroComponent.vue';
 import TestimonialsComponent from './components/TestimonialsComponent.vue';
-import TimerComponent from './components/TimerComponent.vue';
+
 
 
 export default {
@@ -31,7 +31,7 @@ export default {
   data() {
     return {};
   },
-  components: { TimerComponent, HeaderComponent, HeroComponent, BoxComponent, TestimonialsComponent, CourseComponent, BlogComponent, EventComponent, GetContactComponent, FooterComponent }
+  components: { HeaderComponent, HeroComponent, BoxComponent, TestimonialsComponent, CourseComponent, BlogComponent, EventComponent, GetContactComponent, FooterComponent }
 }
 </script>
 

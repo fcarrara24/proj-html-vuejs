@@ -71,3 +71,9 @@ img {
 .elegantTitle {
     font-family: 'Playfair Display', roboto;
 }
+
+.timerHeight {
+    height: $timerHeight;
+    max-height: $timerHeight;
+    background-color: $backgroundgray;
+}
