@@ -9,6 +9,8 @@ $fa-font-path: '../webfonts';
 @import '@fortawesome/fontawesome-free/scss/regular.scss';
 @import '@fortawesome/fontawesome-free/scss/brands.scss';
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fredoka:wght@700&family=Inclusive+Sans&family=Montserrat:wght@500&family=Noto+Sans+Symbols:wght@400;600&family=Open+Sans&family=Oswald:wght@200&family=PT+Sans:wght@400;700&family=Roboto:wght@300;400;500;700&family=Space+Grotesk:wght@700&display=swap');
+//elegant standard writing
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fredoka:wght@700&family=Inclusive+Sans&family=Montserrat:wght@500&family=Noto+Sans+Symbols:wght@400;600&family=Open+Sans&family=Oswald:wght@200&family=PT+Sans:wght@400;700&family=Playfair+Display&family=Roboto:wght@300;400;500;700&family=Space+Grotesk:wght@700&display=swap');
 
 * {
     font-family: 'Roboto';
@@ -49,4 +51,8 @@ $fa-font-path: '../webfonts';
 img {
     max-width: 100%;
     height: auto;
+}
+
+.elegantTitle {
+    font-family: 'Playfair Display', roboto;
 }

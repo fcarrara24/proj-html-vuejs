@@ -8,6 +8,7 @@
     <CourseComponent />
     <BlogComponent />
     <EventComponent />
+    <GetContactComponent />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import BlogComponent from './components/BlogComponent.vue';
 import BoxComponent from './components/BoxComponent.vue';
 import CourseComponent from './components/CourseComponent.vue';
 import EventComponent from './components/EventComponent.vue';
+import GetContactComponent from './components/GetContactComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import HeroComponent from './components/HeroComponent.vue';
 import TestimonialsComponent from './components/TestimonialsComponent.vue';
@@ -27,7 +29,7 @@ export default {
   data() {
     return {};
   },
-  components: { TimerComponent, HeaderComponent, HeroComponent, BoxComponent, TestimonialsComponent, CourseComponent, BlogComponent, EventComponent }
+  components: { TimerComponent, HeaderComponent, HeroComponent, BoxComponent, TestimonialsComponent, CourseComponent, BlogComponent, EventComponent, GetContactComponent }
 }
 </script>
 
