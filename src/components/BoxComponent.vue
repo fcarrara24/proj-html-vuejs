@@ -1,5 +1,5 @@
 <template>
-    <div class="height-box">
+    <div class="height-box container-sm">
         <div class="container box-separator ">
             <div class="specialItalic text-center ">
                 Artist coaching
@@ -122,7 +122,7 @@ export default {
 }
 
 .my-small-card {
-    width: 25%;
+    width: 20%;
     overflow-x: hidden;
 }
 

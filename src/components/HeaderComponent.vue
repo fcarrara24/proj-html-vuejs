@@ -9,6 +9,7 @@
                 <div v-for="section in HeaderArray" class="dropdown h-100">
                     <div class="dropbtn h-100 ">
                         {{ section.name }}
+                        <i class="fa-solid fa-chevron-down fa-2xs"></i>
                     </div>
                     <!-- sezione senza immagine -->
                     <div class="dropdown-content bg-white position-absolute " v-if="!section.img">
@@ -51,8 +52,12 @@
 
             <div class="header-Socials d-flex flex-row justify-content-end  gap-3 align-items-center">
                 <!-- implementing socials dinamically -->
-                <div class=" d-flex flex-row align-items-center justify-content-end h-100 px-2 " v-for="social in socials">
+                <div class=" d-flex flex-row align-items-center justify-content-end h-100 px-2 position-relative social"
+                    v-for="social in socials">
                     <i :class="social.icon" :href="social.link" class="social-icons" style="color: gray;"></i>
+                    <div class="socialName">
+                        {{ social.name }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -151,5 +156,20 @@ export default {
 a {
     text-decoration: none;
     color: black;
+}
+
+.social:hover .socialName {
+    display: block;
+}
+
+.socialName {
+    position: absolute;
+    top: 100%;
+    right: 20%;
+    color: white;
+    background-color: #333333;
+    padding: 5px;
+    border-radius: 10px;
+    display: none;
 }
 </style>
