@@ -14,9 +14,9 @@
                 <div :class="card.bigCard ? 'cardBig' : 'cardSmall'">
                     <div class="d-flex flex-column justify-content-end p-2">
                         <div class="image-container">
-                            <img :src="card.backGroundImg" :alt="card.title">
+                            <img class="img-hoverable" :src="card.backGroundImg" :alt="card.title">
                         </div>
-                        <div class="card-description">
+                        <div class="card-description" :class="card.bigCard ? 'position-absolute p-4 text-white' : ''">
                             <div>{{ card.role }}</div>
                             <div class="BlogCardtitle">{{ card.title }}</div>
                             <span><i class="fa-regular fa-calendar"></i> {{ card.date }} &nbsp;</span>

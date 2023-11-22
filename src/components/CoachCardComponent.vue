@@ -1,7 +1,7 @@
 <template>
     <div class="p-3 m-2 w-100 d-flex flex-column justify-content-start card-height ">
         <div class="w-100 img-container">
-            <img :src="card.imageLink" alt="">
+            <img class="img-hoverable" :src="card.imageLink" alt="">
         </div>
         <div class="text-container p-2 flex-grow-1 d-flex flex-column justify-content-between ">
             <div class="price text-orange">

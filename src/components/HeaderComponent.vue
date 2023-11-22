@@ -16,9 +16,9 @@
                             <div class="reference-container d-flex flex-row justify-content-start align-items-start  pe-3 h-100"
                                 v-for="(reference, ind) in section.categories">
                                 <a :href="reference.link">
-                                    {{ reference.title }}
+                                    {{ reference.title }} &nbsp;&nbsp;&nbsp;
                                 </a>
-                                <div v-if="reference.relevance !== 'none'">
+                                <div v-if="reference.relevance !== 'none'" class=" bg-danger  ">
                                     {{ reference.relevance }}
                                 </div>
                             </div>
@@ -28,7 +28,7 @@
                     <!-- sezione con immgine da completare -->
                     <div v-else-if="section.img" class=" bg-white dropdown-with-image">
                         <div class="dropdown-section d-flex flex-column flex-wrap overflow-hidden ">
-                            <div class="reference-container d-flex flex-row justify-content-start align-items-start  p-3 h-100"
+                            <div class="reference-container d-flex flex-row justify-content-start align-items-start  h-100"
                                 v-for="(reference, ind) in section.categories">
                                 <a :href="reference.link">
                                     {{ reference.title }}
@@ -43,6 +43,7 @@
                             </div>
                         </div>
 
+                        <!-- transition group -->
 
                     </div>
                 </div>

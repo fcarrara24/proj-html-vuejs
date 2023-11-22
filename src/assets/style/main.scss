@@ -24,7 +24,7 @@ $fa-font-path: '../webfonts';
     font-size: 0.5 em;
 
     &:hover {
-        background-color: $backgroundgray;
+        background-color: $hoverButton;
     }
 }
 
@@ -46,12 +46,27 @@ $fa-font-path: '../webfonts';
 
 .image-container {
     max-width: 100%;
+    overflow: hidden;
 }
 
 img {
+
     max-width: 100%;
     height: auto;
+
 }
+
+.img-hoverable {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+
+    }
+}
+
+
+
 
 .elegantTitle {
     font-family: 'Playfair Display', roboto;

@@ -55,7 +55,11 @@
             </div>
 
         </div>
-
+        <div class="videoContainer d-flex flex-row justify-content-center my-5 py-3">
+            <!--   ILWSp0m9G2U-->
+            <iframe src="https://www.youtube.com/embed/ElFJ1qcl74U" frameborder="0" allowfullscreen
+                allow="autoplay; encrypted-media"></iframe>
+        </div>
     </div>
 </template>
 
@@ -124,5 +128,13 @@ export default {
 
 .mid-cursive-size {
     font-size: 24px;
+}
+
+iframe {
+
+    //560px
+    width: 60vw;
+    //315px
+    height: 33vw;
 }
 </style>
