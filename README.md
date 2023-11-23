@@ -1,3 +1,6 @@
+#ATTENZIONE:
+- il progetto è stato pensato per un display di un desktop(1492px), quindi alcune componenti non sono completamente responsive.
+
 Progetto HTML/VueJS
 Repo 
 proj-html-vuejs
