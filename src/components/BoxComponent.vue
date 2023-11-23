@@ -1,5 +1,14 @@
 <template>
-    <div class="height-box container-sm">
+    <!-- costume bg -->
+
+    <div class="height-box position-relative ">
+        <div class="costume-bg overflow-hidden overflow-x-hidden position-absolute ">
+
+            <img v-for="image in bgDataStructure" :src="image.url" alt=""
+                class="position-absolute costume-min bg-transparent "
+                :style="`z-index: ${image.z}; bottom: ${image.bottom}%; left: ${image.left}%; transform: rotate(${image.rotate}deg)`">
+
+        </div>
         <div class="container box-separator ">
             <div class="specialItalic text-center ">
                 Artist coaching
@@ -26,7 +35,7 @@
             <div class="img-conteiner">
                 <img src="../assets/img/artist-quote-icon.png" alt="quote">
             </div>
-            <div class=" w-100 d-flex flex-row justify-content-between ">
+            <div class=" w-100 d-flex flex-row justify-content-between align-items-center  ">
                 <!-- intermediate left -->
                 <div class="intermediate-left d-flex flex-column justify-content-start">
 
@@ -49,7 +58,7 @@
                         <div class="pb-2">
                             As an artist and an educator for nearly 30 years, I understand what it takes to create.
                         </div>
-                        <div class="btn btn-warning ">Get Started Today</div>
+                        <div class="btn invertedBtn ">Get Started Today</div>
                     </div>
                 </div>
             </div>
@@ -91,6 +100,41 @@ export default {
                     title: 'On Time',
                     description: 'Punctuality is our top priority because it\'s an essential criteria to assess a program quality.'
                 },
+            ],
+            bgDataStructure: [
+
+                {
+                    // V
+                    url: '/img/maxcoach-shape-14-1536x343.png',
+                    bottom: '85',
+                    left: '0',
+                    z: 100,
+                },
+                {
+                    //punti
+                    url: '/img/maxcoach-shape-13-150x150.png',
+                    bottom: '80',
+                    left: '90',
+                    z: 200,
+                    rotate: 0,
+
+                },
+                {
+                    //forma blu
+                    url: '/img/artist-shape-01-600x577.png',
+                    bottom: '90',
+                    left: '10',
+                    z: 300,
+                    rotate: 0,
+                },
+                {
+                    //forma allungata
+                    url: '/img/artist-shape-01.png',
+                    bottom: '80',
+                    left: '50',
+                    z: 400,
+                    rotate: 0,
+                },
             ]
         }
     },
@@ -108,7 +152,7 @@ export default {
 }
 
 .big-left-title {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bolder;
 }
 
@@ -136,5 +180,13 @@ iframe {
     width: 60vw;
     //315px
     height: 33vw;
+}
+
+.costume-bg {
+    max-width: 100%;
+    width: 100%;
+    height: 3000px;
+    overflow: hidden;
+    z-index: 0;
 }
 </style>

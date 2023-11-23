@@ -77,3 +77,14 @@ img {
     max-height: $timerHeight;
     background-color: $backgroundgray;
 }
+
+.invertedBtn {
+    font-size: larger;
+    background-color: #fdf0ea;
+    color: $hoverTextOrange;
+
+    &:hover {
+        background-color: $backgroundBtnOrange;
+        color: white;
+    }
+}

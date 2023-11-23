@@ -115,6 +115,4 @@ export default {
 .text-my {
     font-size: 3em;
 }
-
-.costume-min {}
 </style>

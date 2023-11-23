@@ -12,6 +12,9 @@
                     <CoachCardComponent :cardStyle="card" />
                 </div>
             </div>
+            <div class="d-flex flex-row justify-content-center ">
+                <div class="btn invertedBtn">View all courses <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
         </div>
     </div>
 </template>

@@ -4,7 +4,7 @@
     <TimerComponent />
     <div class="timerHeight"></div>
 
-    <div class="   position-fixed bg-white bg-white w-100 my-0">
+    <div class="   position-fixed bg-white bg-white w-100 my-0 p-3 z-hight">
         <div class=" d-flex flex-row justify-content-between py-4">
             <div class="img-container">
                 <img class="header-height" src="../assets/img/dark-logo.png" alt="">
@@ -110,6 +110,10 @@ export default {
 @use '../assets/style/main' as *;
 @use '../assets/style/partials/variables' as *;
 
+.z-hight {
+    z-index: 11000;
+}
+
 .social-icons {
     font-size: 1.5em;
 }
@@ -119,7 +123,7 @@ export default {
 }
 
 * {
-    z-index: 10000;
+    z-index: 1000;
 }
 
 .dropdown {
