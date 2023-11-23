@@ -1,5 +1,5 @@
-<template class="timerHeight">
-    <div class="outerTimer w-100 d-flex justify-content-center position-fixed timerHeight z-timer">
+<template class="timerHeight" >
+    <div class="outerTimer w-100 d-flex justify-content-center position-fixed timerHeight z-timer" ref="Timer">
         <div class=" w-75  d-flex flex-row justify-content-center align-items-center gap-3 py-1 px-3  ">
             <div class="timerDescription">Starts TOMORROW! Our biggest event of the year...</div>
             <div class="timerClock d-flex flex-row justify-content-center gap-1 align-items-center  ">
@@ -21,7 +21,7 @@
                 </div>
 
             </div>
-            <div class="timerButton btn my-btn-orange text-white ">Get Ticket</div>
+            <div class="timerButton btn my-btn-orange text-white " @click="removeBtn()">Get Ticket</div>
         </div>
     </div>
 </template>
@@ -36,7 +36,10 @@ export default {
         }
     },
     methods: {
-
+        removeBtn() {
+            this.$refs.Timer.classList.add('d-none');
+            this.$emit('removeSpacing', '')
+        }
     },
     created() {
         const timeInterval = setInterval(() => {

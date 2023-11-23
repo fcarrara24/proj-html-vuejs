@@ -1,8 +1,8 @@
-<template style="width: 100vw!important; z-index: 10000" >
+<template style="width: 100vw!important; z-index: 10000; " >
     <!-- adding timer component for layout choises here and its spacing -->
 
-    <TimerComponent />
-    <div class="timerHeight"></div>
+    <TimerComponent @removeSpacing="removeSpaces" />
+    <div class="timerHeight" ref="timerHeightSpacing"></div>
 
 
     <div
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <!-- sezione senza immagine -->
-                    <div class="dropdown-content bg-white position-absolute " v-if="!section.img">
+                    <div class="dropdown-content bg-white position-absolute shadow" v-if="!section.img">
                         <div class="dropdown-section d-flex flex-column flex-wrap overflow-hidden ">
                             <div class="reference-container d-flex flex-row justify-content-start align-items-start  pe-3 h-100 "
                                 v-for="(reference, ind) in section.categories">
@@ -43,8 +43,8 @@
 
                     </div>
                     <!-- sezione con immgine da completare -->
-                    <div v-else-if="section.img" class=" bg-white dropdown-with-image">
-                        <div class="dropdown-section d-flex flex-column flex-wrap overflow-hidden ">
+                    <div v-else-if="section.img" class=" bg-white dropdown-with-image shadow">
+                        <div class="dropdown-section d-flex flex-column flex-wrap overflow-hidden  ">
                             <div class="reference-container d-flex flex-row justify-content-start align-items-start  h-100"
                                 v-for="(reference, ind) in section.categories">
                                 <a :href="reference.link" class=" text-secondary">
@@ -111,6 +111,12 @@ export default {
             ],
             HeaderArray: navbarCoponents,
         };
+    },
+    methods:
+    {
+        removeSpaces() {
+            this.$refs.timerHeightSpacing.classList.add('d-none');
+        }
     },
     components: { TimerComponent }
 }

@@ -1,7 +1,13 @@
 <template>
     <div
-        class="bg-blog d-flex flex-column justify-content-center align-items-center blog-background py-3 position-relative ">
-        <img src="/img/public/img/maxcoach-shape-14-1536x343.png" alt="" class=" position-absolute img-back w-100">
+        class="bg-blog d-flex flex-column justify-content-center align-items-center blog-background py-3 position-relative w-100">
+        <div class="costume-bg overflow-hidden overflow-x-hidden position-absolute ">
+
+            <img v-for="image in bgDataStructure" :src="image.url" alt=""
+                class="position-absolute costume-min bg-transparent "
+                :style="`z-index: ${image.z}; bottom: ${image.bottom}%; left: ${image.left}%; transform: rotate(${image.rotate}deg)`">
+
+        </div>
         <div class="specialItalic">
             Articels and Tips
         </div>
@@ -74,6 +80,34 @@ export default {
                     top: 200,
                     backGroundImg: '/img/artist-blog-3.jpg',
                 },
+            ],
+            bgDataStructure: [
+
+                {
+                    //macchia
+                    url: '/img/artist-shape-01.png',
+                    bottom: '15',
+                    left: '0',
+                    z: 100,
+                },
+                {
+                    //punti
+                    url: '/img/maxcoach-shape-05.png',
+                    bottom: '50',
+                    left: '80',
+                    z: 200,
+                    rotate: 0,
+
+                },
+                {
+                    //forma blu
+                    url: '/img/maxcoach-shape-05.png',
+                    bottom: '0',
+                    left: '10',
+                    z: 300,
+                    rotate: 0,
+                },
+
             ]
         }
     }
@@ -118,8 +152,9 @@ export default {
 
 .img-back {
     top: 50%;
-    left: 0%;
+    left: 50%;
     z-index: 100;
+    width: 1000px;
 }
 
 .cardSmall {
@@ -133,4 +168,12 @@ export default {
 
 img {
     max-width: 100%;
-}</style>
+}
+
+.costume-bg {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+</style>

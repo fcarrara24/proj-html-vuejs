@@ -1,5 +1,5 @@
 <template >
-    <div class="heroHeigth position-relative">
+    <div class="heroHeigth position-relative pt-5">
         <div class="costume-bg overflow-hidden overflow-x-hidden position-absolute ">
 
             <img v-for="image in bgDataStructure" :src="image.url" alt=""
@@ -77,6 +77,30 @@ export default {
                     left: '20',
                     z: 600,
                     rotate: 180,
+                },
+                {
+                    //immagine 
+                    url: '/img/artist-hero-image-01.jpg',
+                    bottom: '0',
+                    left: '20',
+                    z: 650,
+                    rotate: 0,
+                },
+                {
+                    //immagine 
+                    url: '/img/artist-hero-image-02-232x300.jpg',
+                    bottom: '30',
+                    left: '10',
+                    z: 700,
+                    rotate: 0,
+                },
+                {
+                    //immagine 
+                    url: '/img/artist-hero-image-04.jpg',
+                    bottom: '20',
+                    left: '70',
+                    z: 750,
+                    rotate: 0,
                 },
 
             ]
