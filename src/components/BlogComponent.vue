@@ -1,5 +1,7 @@
 <template>
-    <div class="bg-blog d-flex flex-column justify-content-center align-items-center blog-background py-3 ">
+    <div
+        class="bg-blog d-flex flex-column justify-content-center align-items-center blog-background py-3 position-relative ">
+        <img src="/img/public/img/maxcoach-shape-14-1536x343.png" alt="" class=" position-absolute img-back w-100">
         <div class="specialItalic">
             Articels and Tips
         </div>
@@ -114,6 +116,12 @@ export default {
     height: auto;
 }
 
+.img-back {
+    top: 50%;
+    left: 0%;
+    z-index: 100;
+}
+
 .cardSmall {
     max-width: 200px;
     height: auto;
@@ -125,5 +133,4 @@ export default {
 
 img {
     max-width: 100%;
-}
-</style>
+}</style>

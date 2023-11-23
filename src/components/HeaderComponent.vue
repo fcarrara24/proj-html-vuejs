@@ -4,28 +4,38 @@
     <TimerComponent />
     <div class="timerHeight"></div>
 
+
     <div
-        class="  position-fixed bg-white bg-white w-100  my-0 p-3 z-hight Header-height d-flex flex-row justify-content-between align-items-center">
+        class="  position-fixed bg-white bg-white w-100  my-0 p-5 z-hight Header-height d-flex flex-row justify-content-between align-items-center shadow ">
+
         <div class=" d-flex flex-row justify-content-between py-4 h-100 w-100">
             <div class="img-container h-100">
                 <img class="header-height" src="../assets/img/dark-logo.png" alt="">
             </div>
+            <!-- traslabile immagine -->
+            <div class="background-image">
+
+            </div>
             <!-- navbar components  -->
-            <div class="d-flex flex-row justify-content-center gap-3 align-items-center position-relative ">
+            <div class="d-flex flex-row justify-content-center gap-3 align-items-center position-relative">
                 <div v-for="section in HeaderArray" class="dropdown h-100">
-                    <div class="dropbtn h-100 ">
+                    <div class="dropbtn h-100 pe-3 ">
                         {{ section.name }}
                         <i class="fa-solid fa-chevron-down fa-2xs"></i>
+                        <!-- underline-effect -->
+                        <div class="underline-progressive">
+                            <div class="underline-filler"></div>
+                        </div>
                     </div>
                     <!-- sezione senza immagine -->
                     <div class="dropdown-content bg-white position-absolute " v-if="!section.img">
                         <div class="dropdown-section d-flex flex-column flex-wrap overflow-hidden ">
-                            <div class="reference-container d-flex flex-row justify-content-start align-items-start  pe-3 h-100"
+                            <div class="reference-container d-flex flex-row justify-content-start align-items-start  pe-3 h-100 "
                                 v-for="(reference, ind) in section.categories">
-                                <a :href="reference.link">
+                                <a :href="reference.link" class="text-secondary">
                                     {{ reference.title }} &nbsp;&nbsp;&nbsp;
                                 </a>
-                                <div v-if="reference.relevance !== 'none'" class=" bg-danger  ">
+                                <div v-if="reference.relevance !== 'none'" class=" bg-relevance card ">
                                     {{ reference.relevance }}
                                 </div>
                             </div>
@@ -37,10 +47,10 @@
                         <div class="dropdown-section d-flex flex-column flex-wrap overflow-hidden ">
                             <div class="reference-container d-flex flex-row justify-content-start align-items-start  h-100"
                                 v-for="(reference, ind) in section.categories">
-                                <a :href="reference.link">
-                                    {{ reference.title }}
+                                <a :href="reference.link" class=" text-secondary">
+                                    {{ reference.title }} &nbsp;&nbsp;&nbsp;
                                 </a>
-                                <div v-if="reference.relevance !== 'none'">
+                                <div v-if="reference.relevance !== 'none'" class="bg-relevance card">
                                     {{ reference.relevance }}
                                 </div>
 
@@ -144,6 +154,10 @@ export default {
     }
 }
 
+.reference-container {
+    padding: 5px;
+}
+
 .dropdown-content {
     display: none;
     min-width: 15vw;
@@ -152,7 +166,7 @@ export default {
 }
 
 .dropdown-section {
-    max-height: 300px;
+    max-height: 400px;
 }
 
 .dropdown-with-image {
@@ -162,11 +176,18 @@ export default {
     transform: translate(-50%, 0);
 }
 
-.dropbtn:hover {
+.dropbtn {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 
-    color: #EF6F31;
-
+    &:hover {
+        color: #EF6F31;
+    }
 }
+
 
 a {
     text-decoration: none;
@@ -190,5 +211,35 @@ a {
 
 .Header-height {
     max-height: 50px;
+}
+
+.underline-progressive {
+    display: none;
+    width: 100%;
+    height: 2px;
+
+    &:hover .underline-filler {
+        animation: grow 1s linear;
+        width: 100%;
+    }
+
+}
+
+.underline-filler {
+    width: 0px;
+    height: 100%;
+    background-color: #EF6F31;
+}
+
+.text-secondary {
+    color: gray;
+}
+
+.bg-relevance {
+    font-size: 0.2em;
+    color: white;
+    font-size: larger;
+    background: rgb(180, 58, 140);
+    background: linear-gradient(90deg, rgba(180, 58, 140, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
 </style>
