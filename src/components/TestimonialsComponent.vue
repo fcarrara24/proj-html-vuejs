@@ -10,7 +10,7 @@
             <div class="text-center my-title">
                 Why do people love me?
             </div>
-            <div class="d-flex flex-row justify-content-center container gap-3 ">
+            <div class="d-flex flex-row justify-content-center container gap-3 UserCardWrapper" ref="UserCardWrapper">
                 <div class="userCardContainer" v-for="(card, index ) in userCards">
                     <UserCardComponent :cardSpecifics="card" />
                 </div>
@@ -84,6 +84,11 @@ export default {
     methods: {
         selectImage(number) {
             store.indexSelected = number;
+            this.$refs.UserCardWrapper.classList.add('UserCardWrapperAnimation');
+            //remove effect
+            setTimeout(() => {
+                this.$refs.UserCardWrapper.classList.remove('UserCardWrapperAnimation');
+            }, 200);
         }
     },
     components: { UserCardComponent }
@@ -112,5 +117,21 @@ export default {
 .dot-container>i {
     width: 100%;
     height: 100%;
+}
+
+.UserCardWrapperAnimation {
+    animation: fadeInOut 0.2s;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 </style>
