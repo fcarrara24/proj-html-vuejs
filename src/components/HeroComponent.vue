@@ -1,6 +1,6 @@
 <template >
     <div class="heroHeigth position-relative">
-        <div class="costume-bg overflow-hidden overflow-x-hidden ">
+        <div class="costume-bg overflow-hidden overflow-x-hidden position-absolute ">
 
             <img v-for="image in bgDataStructure" :src="image.url" alt=""
                 class="position-absolute costume-min bg-transparent "

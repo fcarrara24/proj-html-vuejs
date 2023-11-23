@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-blog d-flex flex-column justify-content-center align-items-center ">
+    <div class="bg-blog d-flex flex-column justify-content-center align-items-center blog-background py-3 ">
         <div class="specialItalic">
             Articels and Tips
         </div>
@@ -11,16 +11,16 @@
             <div class="" v-for="card in blogCards">
                 <!-- spacekeepercomponent will sllow card to be on different height levels -->
                 <div class="spaceKeeper" :style="`height:${card.top}px;`"></div>
-                <div :class="card.bigCard ? 'cardBig' : 'cardSmall'">
-                    <div class="d-flex flex-column justify-content-end p-2">
+                <div :class="card.bigCard ? 'cardBig' : 'cardSmall'" class="bg-white m-3 shadow">
+                    <div class="d-flex flex-column justify-content-end">
                         <div class="image-container">
                             <img class="img-hoverable" :src="card.backGroundImg" :alt="card.title">
                         </div>
-                        <div class="card-description" :class="card.bigCard ? 'position-absolute p-4 text-white' : ''">
-                            <div>{{ card.role }}</div>
+                        <div class="card-description p-1" :class="card.bigCard ? 'position-absolute p-4 text-white' : ''">
+                            <div class="role-text">{{ card.role }}</div>
                             <div class="BlogCardtitle">{{ card.title }}</div>
-                            <span><i class="fa-regular fa-calendar"></i> {{ card.date }} &nbsp;</span>
-                            <span><i class="fa-regular fa-eye"></i> {{ card.views }} &nbsp;</span>
+                            <span class="role-text"><i class="fa-regular fa-calendar"></i> {{ card.date }} &nbsp;</span>
+                            <span class="role-text"><i class="fa-regular fa-eye"></i> {{ card.views }} &nbsp;</span>
                         </div>
                     </div>
                 </div>
@@ -79,6 +79,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.role-text {
+    font-size: 0.7em;
+}
+
+.blog-background {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(245, 247, 250, 1) 10%, rgba(245, 247, 250, 1) 90%, rgba(255, 255, 255, 1) 100%);
+}
+
 .blog-title {
     font-size: 1.5em;
     font-weight: bolder;
@@ -92,6 +101,12 @@ export default {
 .card-container {
     max-width: 1200px;
 
+}
+
+.BlogCardtitle {
+    font-size: 1em;
+    font-weight: bolder;
+    text-overflow: clip;
 }
 
 .cardBig {

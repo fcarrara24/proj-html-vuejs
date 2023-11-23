@@ -9,7 +9,7 @@
                 :style="`z-index: ${image.z}; bottom: ${image.bottom}%; left: ${image.left}%; transform: rotate(${image.rotate}deg)`">
 
         </div>
-        <div class="container box-separator ">
+        <div class="container box-separator z-mid">
             <div class="specialItalic text-center ">
                 Artist coaching
             </div>
@@ -64,10 +64,10 @@
             </div>
 
         </div>
-        <div class="videoContainer d-flex flex-row justify-content-center my-5 py-3">
+        <div class="videoContainer d-flex flex-row justify-content-center my-5 py-3 z-mid ">
             <!--   ILWSp0m9G2U-->
             <iframe src="https://www.youtube.com/embed/ElFJ1qcl74U" frameborder="0" allowfullscreen
-                allow="autoplay; encrypted-media"></iframe>
+                allow="autoplay; encrypted-media" class="z-mid shadow"></iframe>
         </div>
     </div>
 </template>
@@ -135,6 +135,22 @@ export default {
                     z: 400,
                     rotate: 0,
                 },
+                {
+                    //forma blu
+                    url: '/img/artist-shape-01-600x577.png',
+                    bottom: '50',
+                    left: '10',
+                    z: 300,
+                    rotate: 0,
+                },
+                {
+                    //forma allungata
+                    url: '/img/artist-shape-05.png',
+                    bottom: '55',
+                    left: '60',
+                    z: 200,
+                    rotate: 0,
+                },
             ]
         }
     },
@@ -145,6 +161,10 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/style/main' as *;
 @use '../assets/style/partials/variables' as *;
+
+.z-mid {
+    z-index: 1000;
+}
 
 .my-title {
     font-size: 2em;

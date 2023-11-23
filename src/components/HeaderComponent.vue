@@ -4,13 +4,14 @@
     <TimerComponent />
     <div class="timerHeight"></div>
 
-    <div class="   position-fixed bg-white bg-white w-100 my-0 p-3 z-hight">
-        <div class=" d-flex flex-row justify-content-between py-4">
-            <div class="img-container">
+    <div
+        class="  position-fixed bg-white bg-white w-100  my-0 p-3 z-hight Header-height d-flex flex-row justify-content-between align-items-center">
+        <div class=" d-flex flex-row justify-content-between py-4 h-100 w-100">
+            <div class="img-container h-100">
                 <img class="header-height" src="../assets/img/dark-logo.png" alt="">
             </div>
             <!-- navbar components  -->
-            <div class="d-flex flex-row justify-content-center gap-3 align-items-start position-relative ">
+            <div class="d-flex flex-row justify-content-center gap-3 align-items-center position-relative ">
                 <div v-for="section in HeaderArray" class="dropdown h-100">
                     <div class="dropbtn h-100 ">
                         {{ section.name }}
@@ -185,5 +186,9 @@ a {
     padding: 5px;
     border-radius: 10px;
     display: none;
+}
+
+.Header-height {
+    max-height: 50px;
 }
 </style>

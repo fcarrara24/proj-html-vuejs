@@ -7,12 +7,12 @@
             <div class="artistTitle text-center">
                 Latest Online Courses
             </div>
-            <div class="card-container d-flex flex-row flex-wrap justify-content-between ">
+            <div class="card-container d-flex flex-row flex-wrap justify-content-between pb-5 ">
                 <div class="coachingCard card-width " v-for="card in coachingCard">
                     <CoachCardComponent :cardStyle="card" />
                 </div>
             </div>
-            <div class="d-flex flex-row justify-content-center ">
+            <div class="d-flex flex-row justify-content-center mb-4 ">
                 <div class="btn invertedBtn">View all courses <i class="fa-solid fa-arrow-right"></i></div>
             </div>
         </div>

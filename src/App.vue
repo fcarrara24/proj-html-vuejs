@@ -31,7 +31,7 @@ export default {
   data() {
     return {};
   },
-  components: { HeaderComponent, HeroComponent, BoxComponent, TestimonialsComponent, CourseComponent, BlogComponent, EventComponent, GetContactComponent, FooterComponent }
+  components: { HeaderComponent, HeroComponent, BoxComponent, CourseComponent, BlogComponent, EventComponent, GetContactComponent, FooterComponent, TestimonialsComponent }
 }
 </script>
 

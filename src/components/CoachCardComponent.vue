@@ -1,9 +1,9 @@
 <template>
-    <div class="p-3 m-2 w-100 d-flex flex-column justify-content-start card-height caochCard position-relative ">
+    <div class=" m-2 w-100 d-flex flex-column justify-content-start card-height caochCard position-relative shadow">
         <div class="w-100 img-container">
             <img class="img-hoverable" :src="card.imageLink" alt="">
         </div>
-        <div class="text-container p-2 flex-grow-1 d-flex flex-column justify-content-between cardWrites">
+        <div class="text-container p-2 flex-grow-1 d-flex flex-column justify-content-between cardWrites w-100">
             <div class="price text-orange">
                 $ {{ card.dollarPrice }}.00
             </div>
@@ -62,7 +62,7 @@ img {
 }
 
 .card-height {
-    min-height: 400px;
+    min-height: 450px;
 }
 
 .coachCardInfo {
@@ -71,8 +71,11 @@ img {
 
 .caochCard:hover .cardWrites {
     position: absolute;
+
     top: 60%;
+    height: 40%;
     background-color: white;
     border: 2px solid #EF6F31;
+
 }
 </style>

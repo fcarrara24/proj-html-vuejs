@@ -11,7 +11,7 @@
                 <!-- dinamic class for card position in the page -->
                 <div class="d-flex  justify-content-center gap-4 "
                     :class="card.isTxtRight ? 'flex-row' : 'flex-row-reverse'">
-                    <div class="image-container">
+                    <div class="image-container card-height">
                         <img class="img-hoverable overflow-hidden " :src="card.image" :alt="card.title">
                     </div>
                     <div class="text-container d-flex flex-column align-items-start justify-content-center ">
