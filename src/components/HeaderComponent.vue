@@ -27,40 +27,25 @@
                             <div class="underline-filler"></div>
                         </div>
                     </div>
-                    <!-- sezione senza immagine -->
-                    <div class="dropdown-content bg-white position-absolute shadow" v-if="!section.img">
-                        <div class="dropdown-section d-flex flex-column flex-wrap overflow-hidden ">
-                            <div class="reference-container d-flex flex-row justify-content-start align-items-start  pe-3 h-100 "
-                                v-for="(reference, ind) in section.categories">
-                                <a :href="reference.link" class="text-secondary">
-                                    {{ reference.title }} &nbsp;&nbsp;&nbsp;
-                                </a>
-                                <div v-if="reference.relevance !== 'none'" class=" bg-relevance card ">
-                                    {{ reference.relevance }}
+                    <!-- contentitore immagini -->
+                    <div class="dropdown-content bg-white position-absolute shadow "
+                        :class="!section.img ? 'no-image' : 'dropdown-with-image'">
+                        <div class="d-inline-block">
+                            <div class="dropdown-section d-flex flex-column flex-wrap overflow-hidden ">
+                                <div class="reference-container d-flex flex-row justify-content-start align-items-start  pe-3 h-100 "
+                                    v-for="(reference, ind) in section.categories">
+                                    <a :href="reference.link" class="text-secondary">
+                                        {{ reference.title }} &nbsp;&nbsp;&nbsp;
+                                    </a>
+                                    <div v-if="reference.relevance !== 'none'" class=" bg-relevance card ">
+                                        {{ reference.relevance }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-                    <!-- sezione con immgine da completare -->
-                    <div v-else-if="section.img" class=" bg-white dropdown-with-image shadow">
-                        <div class="dropdown-section d-flex flex-column flex-wrap overflow-hidden  ">
-                            <div class="reference-container d-flex flex-row justify-content-start align-items-start  h-100"
-                                v-for="(reference, ind) in section.categories">
-                                <a :href="reference.link" class=" text-secondary">
-                                    {{ reference.title }} &nbsp;&nbsp;&nbsp;
-                                </a>
-                                <div v-if="reference.relevance !== 'none'" class="bg-relevance card">
-                                    {{ reference.relevance }}
-                                </div>
-
-                            </div>
-                            <div class="image">
-                                <img width="200" height="100" :src="section.img" alt="">
-                            </div>
+                        <div class="image d-inline-block card" style="width: 300px;" v-if="section.img">
+                            <img :src="section.img" alt="">
                         </div>
-
-                        <!-- transition group -->
 
                     </div>
                 </div>
@@ -149,6 +134,10 @@ export default {
 
     &:hover>.dropdown-content {
         display: block;
+
+    }
+
+    &:hover>.no-image {
         padding: 20px;
         padding-left: 0;
         padding-bottom: 20px;
